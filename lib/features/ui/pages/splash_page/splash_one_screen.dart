@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexelon_app/features/ui/pages/splash_page/splash_two_screen.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -9,21 +10,21 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
- // @override
-  // void initState() {
-  //   super.initState();
-  //   goLoginScreen();
-  // }
+    @override
+    void initState() {
+        super.initState();
+        goLoginScreen();
+      }
 
-  // void goLoginScreen() async {
-  //   await Future.delayed(const Duration(seconds: 3));
-  //   if (mounted) {
-  //     // Navigator.pushReplacement(
-  //     //   context,
-  //     //   MaterialPageRoute(builder: (context) => OnboardScreen()),
-  //     // );
-  //   }
-  // }
+      void goLoginScreen() async {
+        await Future.delayed(const Duration(seconds: 3));
+        if (mounted) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => SplashTwoScreen()),
+      );
+      }
+      }
 
   @override
   Widget build(BuildContext context) {
